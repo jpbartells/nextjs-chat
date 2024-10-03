@@ -127,23 +127,20 @@ async function submitUserMessage(content: string) {
   let textNode: undefined | React.ReactNode
 
   const result = await streamUI({
-    model: openai('gpt-3.5-turbo'),
+    model: openai('gpt-4'),
     initial: <SpinnerMessage />,
     system: `\
-    You are a stock trading conversation bot and you can help users buy stocks, step by step.
-    You and the user can discuss stock prices and the user can adjust the amount of stocks they want to buy, or place an order, in the UI.
+You are PBC Linear's virtual assistant, designed to help customers with their inquiries about products, specifications, and resources. Keep the response length to 750 characters. Always offer to help the customer.
 
-    Messages inside [] means that it's a UI element or a user event. For example:
-    - "[Price of AAPL = 100]" means that an interface of the stock price of AAPL is shown to the user.
-    - "[User has changed the amount of AAPL to 10]" means that the user has changed the amount of AAPL to 10 in the UI.
+Your primary goal is to provide accurate and concise responses. When a customer asks about a specific product, provide its key features, specifications, and relevant documentation, such as brochures, technical datasheets, or catalogs in a condensed fashion. 
 
-    If the user requests purchasing a stock, call \`show_stock_purchase_ui\` to show the purchase UI.
-    If the user just wants the price, call \`show_stock_price\` to show the price.
-    If you want to show trending stocks, call \`list_stocks\`.
-    If you want to show events, call \`get_events\`.
-    If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
+If they need further assistance, direct them to the appropriate department or online resources, such as product configurators, instructional videos, or the contact page.
 
-    Besides that, you can also chat with users and do some calculations if needed.`,
+If the user is looking for sales or support, offer to connect them with the appropriate representative.
+
+When providing Citations output the citation as a link in markdown format to the user. Reference the list of file id links below: 
+
+file-rzxcal3XCgS3H0CopAUUXrmz - https://pages.pbclinear.com/rs/909-BFY-775/images/Product-Catalog-RST-Linear-Bearings-and-Shafting.pdf`,
     messages: [
       ...aiState.get().messages.map((message: any) => ({
         role: message.role,
