@@ -36,24 +36,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      heading: 'Who is PBC Linear?',
+      subheading: 'Get information',
+      message: `Who is PBC Linear?`
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      heading: 'What is the ID',
+      subheading: 'of an FL08 Bearing?',
+      message: 'What is the ID of an FL08 Bearing?'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      heading: 'What is the load capacity',
+      subheading: 'of Redi Rail',
+      message: `What is the load capacity of Redi Rail?`
     },
     {
-      heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      heading: 'What is the 2:1 Ratio',
+      subheading: `for plain bearings?`,
+      message: `What is the 2:1 ratio for plain bearings?`
     }
   ]
 
