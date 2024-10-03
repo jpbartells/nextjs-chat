@@ -12,7 +12,7 @@ export function EmptyScreen() {
           Welcome to the PBC Linear AI Chatbot!
         </h1>
         <p className="leading-normal text-muted-foreground">
-          This is an open source AI chatbot app template.
+          This is based on an open source AI chatbot app template.
         </p>
       </div>
     </div>
