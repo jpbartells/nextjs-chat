@@ -8,7 +8,7 @@ import { useActions, useUIState } from 'ai/rsc'
 import { UserMessage } from './stocks/message'
 import { type AI } from '@/lib/chat/actions'
 import { Button } from '@/components/ui/button'
-import { IconArrowElbow, IconPlus } from '@/components/ui/icons'
+import { IconArrowElbow, IconEdit, IconPlus } from '@/components/ui/icons'
 import {
   Tooltip,
   TooltipContent,
@@ -77,7 +77,7 @@ export function PromptForm({
                 router.push('/new')
               }}
             >
-              <IconPlus />
+              <IconEdit />
               <span className="sr-only">New Chat</span>
             </Button>
           </TooltipTrigger>
