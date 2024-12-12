@@ -169,7 +169,6 @@ file-rzxcal3XCgS3H0CopAUUXrmz - https://pages.pbclinear.com/rs/909-BFY-775/image
         })
       } else {
         textStream.update(delta)
-        textStream.replace(/\【.*?】/g, "")
       }
       
 
@@ -581,7 +580,7 @@ export const getUIStateFromAIState = (aiState: Chat) => {
           <UserMessage>{message.content as string}</UserMessage>
         ) : message.role === 'assistant' &&
           typeof message.content === 'string' ? (
-          <BotMessage content={message.content} />
+          <BotMessage content={message.content.replace(/\【.*?】/g, "")} />
         ) : null
     }))
 }
