@@ -170,6 +170,7 @@ file-rzxcal3XCgS3H0CopAUUXrmz - https://pages.pbclinear.com/rs/909-BFY-775/image
       } else {
         textStream.update(delta)
       }
+      {textStream.content.replace(/\【.*?】/g, "")}
 
       return textNode
     },
